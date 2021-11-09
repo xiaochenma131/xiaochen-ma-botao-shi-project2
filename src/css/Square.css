@@ -1,0 +1,17 @@
+.square {
+    border: 3px solid gray;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+}
+
+.miss {
+    background-color: green;
+}
+
+.hit {
+    background-color:palevioletred;
+}
