@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import myBoardReducer from './myBoardReducer';
-import enemyBoardReducer from './enemyBoardReducer';
-import myTurnReducer from './myTurnReducer';
+import ComputerBoard from './ComputerReducer';
+import PlayerBoard from './PlayerReducer';
+import ChangeTurn from './ChangeTurnReducer';
 
 export default combineReducers({
-    enemyBoard: enemyBoardReducer,
-    myBoard: myBoardReducer,
-    myTurn: myTurnReducer,
+    ComputerBoard: ComputerBoard,
+    PlayerBoard: PlayerBoard,
+    ChangeTurn: ChangeTurn,
 })

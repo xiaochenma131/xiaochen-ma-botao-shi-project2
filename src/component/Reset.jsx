@@ -1,17 +1,17 @@
-import '../css/Button.css';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-export default function ResetButton() {
+// Too many codes if call dispatch type === reset when needed, so make a function
+export default function Reset() {
 
     const dispatch = useDispatch();
 
-    return (<button onClick={() => {
+    return (<link onClick={() => {
         dispatch(
             {
                 type: 'reset',
             }
         );
     }
-    } class='reset'>RESET</button >);
+    } class='reset'></link >);
 }

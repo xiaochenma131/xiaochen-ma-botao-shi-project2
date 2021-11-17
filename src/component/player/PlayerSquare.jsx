@@ -1,16 +1,16 @@
 import React from 'react';
+import '../../css/Square.css';
 import { useDispatch } from 'react-redux';
-import '../css/Square.css';
 import { AiOutlineCheck, AiOutlineClose } from "react-icons/ai";
 
-export default function MySquare(props) {
+export default function PlayerSquare(props) {
     const state = props.state;
 
-    let mark;
+    let mark = '';
     if (state === 'hit') {
-        mark = <AiOutlineCheck />;
-    } else if (state === 'miss') {
         mark = <AiOutlineClose />;
+    } else if (state === 'miss') {
+        mark = <AiOutlineCheck />;
     }
 
     const dispatch = useDispatch();
@@ -18,15 +18,17 @@ export default function MySquare(props) {
     return (<div onClick={() => {
         dispatch(
             {
-                type: 'myBoardClick',
+                type: 'PlayerBoardClick',
                 x: props.x,
                 y: props.y,
             }
         );
+
+        // ChangeTurn will set the square value back to the previous state
         dispatch(
             {
-                type: 'changeTurn',
-                squareStateOfClicked: state,
+                type: 'ChangeTurn',
+                square: props.state,
             }
         );
     }

@@ -8,10 +8,14 @@
     background-color: lightblue;
 }
 
+.square:hover {
+    background-color: gray;
+}
+
 .miss {
     background-color: green;
 }
 
 .hit {
-    background-color:palevioletred;
+    background-color:red;
 }

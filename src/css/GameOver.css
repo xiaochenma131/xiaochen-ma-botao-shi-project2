@@ -1,7 +1,7 @@
-.endGameHeader {
+.GameOver {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    color: red;
+    margin-top: 150px;
+    gap: 50px;
 }
